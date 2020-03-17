@@ -1,0 +1,25 @@
+<div class="container">
+    <br><br>
+<h2 class="text-center">Calculator App</h2>
+<br>
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <input class="form-control" type="number" placeholder="enter number 1" [(ngModel)]="number1">
+        <br>
+        <input class="form-control" type="number" placeholder="enter number 2" [(ngModel)]="number2">
+        <br>
+        <button (click)="addNumbers()" class="btn btn-primary mx-1">Add</button>
+        <button (click)="subtractNumbers()" class="btn btn-warning  mx-1">subtract</button>
+        <button (click)="multiplyNumbers()" class="btn btn-success  mx-1">multiply</button>
+        <button (click)="divideNumbers()" class="btn btn-danger  mx-1">divide</button>
+        <br>
+        <br>
+        <p>value entered in number 1 is : {{number1}}</p>
+        <p>value entered in number 2 is : {{number2}}</p>
+        <h4>Result of {{operation}} : {{result}}</h4>
+    </div>
+    <div class="col-lg-3"></div>
+</div>
+
+</div>
