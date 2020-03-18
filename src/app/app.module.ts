@@ -10,6 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { TestcompComponent } from './testcomp/testcomp.component';
+import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { TestcompComponent } from './testcomp/testcomp.component';
     HomeComponent,
     ContactComponent,
     TestcompComponent,
+    CurrencyConverterComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

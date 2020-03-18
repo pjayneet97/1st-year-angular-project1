@@ -1,0 +1,28 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <h2 class="text-center">Convert Currency</h2>
+            <br>
+            <input class="form-control" type="number" [(ngModel)]="enterdValue" placeholder="enter currency to be converted">
+            <br>
+            <h5>Select Currency</h5>
+            <p>
+                <input type="radio"  name="currencytype" value="doller" [(ngModel)]="currencytype"> Doller
+            </p>
+            <p><input type="radio"  name="currencytype" value="rupees"  [(ngModel)]="currencytype"> Rupees</p>
+            <button (click)="converCurrency()" class="btn btn-primary">Convert</button>
+            <br>
+            <br>
+            <h3>
+                
+                Converted Currency vakue is :
+                <span *ngIf="currencytype=='rupees'"> &#36; </span>
+                <span *ngIf="currencytype!='rupees'">&#8377;</span> {{result}} 
+            </h3>
+            <br><br><br>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
