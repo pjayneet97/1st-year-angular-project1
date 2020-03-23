@@ -13,6 +13,10 @@ import { TestcompComponent } from './testcomp/testcomp.component';
 import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { TestComponent } from './test/test.component';
+import { StudentCardComponent } from './test/student-card/student-card.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +28,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     TestcompComponent,
     CurrencyConverterComponent,
     DashboardComponent,
+    TestComponent,
+    StudentCardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

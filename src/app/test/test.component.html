@@ -1,0 +1,25 @@
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2 class="text-center">Add Students</h2>  
+            <input class="form-control" type="text" placeholder="enter Name" [(ngModel)]="studentTobeAdded.name"> 
+            <p>entered name : {{studentTobeAdded.name}}</p>
+            <input class="form-control" type="text" placeholder="enter age" [(ngModel)]="studentTobeAdded.age">
+            <p>Entered Age : {{studentTobeAdded.age}}</p>
+            <textarea class="form-control" cols="60" rows="5" [(ngModel)]="studentTobeAdded.description"></textarea>
+            <br>
+            <button (click)="addStudent()" class="btn btn-primary">Add Student</button>
+            <img src="../s" alt="">
+            <br>
+        </div>
+        <div class="col-lg-6">
+            <h2 class="text-center">List of students</h2>
+            <!-- <p *ngFor="let student of students">{{student.name}}</p> -->
+            <div *ngFor="let student of students">
+                <app-student-card [data]="student" (deleteStudent)="deleteStudent($event)"></app-student-card>
+            </div>
+        </div>
+    </div>
+</div>

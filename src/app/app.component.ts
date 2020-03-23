@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+ /*  displayMessage="none" */
   title = 'prod';
+  constructor(){
+/*     setTimeout(() => {
+      this.displayMessage="block"
+    }, 2000); */
+  }
 }

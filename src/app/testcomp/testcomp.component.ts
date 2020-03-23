@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class TestcompComponent implements OnInit {
   number1:number;
   number2:number;
+  resultAvailable:boolean=false;
+  resultColor='red'
   result:number=0;
   operation;
   constructor() { 
@@ -25,6 +27,15 @@ export class TestcompComponent implements OnInit {
    if(this.isInputValid()){
     this.result=this.number1+this.number2;
     this.operation="addition"
+    //this.resultAvailable=true;
+    this.resultColor='green'
+    setTimeout(()=>{
+      //this.resultAvailable=false;
+      this.resultColor='red'
+      this.result=undefined;
+    },5000)
+
+
     this.resetNumbers()
    }
    else{
@@ -55,6 +66,7 @@ export class TestcompComponent implements OnInit {
   divideNumbers(){
     if(this.isInputValid()){
       this.result=this.number1/this.number2;
+
       this.operation="division"
       this.resetNumbers()
      }
@@ -75,6 +87,26 @@ export class TestcompComponent implements OnInit {
   resetNumbers(){
     this.number1=undefined;
     this.number2=null;
+  }
+  showAlert(){
+    alert("hello");
+  }
+
+  getColor(){
+    if(this.result){
+      return "green";
+    }
+    else{
+      return "red"
+    }
+  }
+  isGreen(){
+    if(this.result){
+      return true
+    }
+    else{
+      return false
+    }
   }
 
 
